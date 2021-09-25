@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/logo16px.png" type="image/x-icon">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
+    <link rel="stylesheet" href="./css/style.css">
+    <title>Geekflix | Início</title>
+</head>
+
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-dark bg-light" aria-label="Third navbar example">
+            <div class="container-fluid">
+                <a class="navbar-brand" href="#"> <img src="./img/Geekflix.fw.png" alt="Logo da Geekflix" class="logo img-fluid mx-4"></a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="filmes" aria-controls="navbarsExample03" aria-expanded="false"
+                    aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse justify-content-end mx-4" id="filmes">
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link active text-dark px-4" aria-current="page" href="#">Início</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link active text-dark" aria-current="page" href="./cadastro.html">Cadastro</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark px-4" href="#" id="dropdown03" data-bs-toggle="dropdown"
+                                aria-expanded="false">Filmes da DC</a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown03">
+                                <li><a class="dropdown-item" href="./aves-rapina.html">Aves de Rapina</a></li>
+                                <li><a class="dropdown-item" href="./mulher-maravilha.html">Mulher-Maravilha</a></li>
+                                <li><a class="dropdown-item" href="./coringa.html">Coringa</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-dark px-4" href="#" id="dropdown03" data-bs-toggle="dropdown"
+                                aria-expanded="false">Filmes da Marvel</a>
+                            <ul class="dropdown-menu" aria-labelledby="dropdown03">
+                                <li><a class="dropdown-item" href="./viuva-negra.html">Viúva Negra</a></li>
+                                <li><a class="dropdown-item" href="./vingadores.html">Vingadores</a></li>
+                                <li><a class="dropdown-item" href="./capita-marvel.html">Capitã Marvel</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    <main>
+        <section id="banner" class="d-flex flex-column align-items-center justify-content-center">
+            <h1 class="display-1 bg-dark text-light">Geekflix</h1>
+            <p class="bg-dark text-light">O streaming feito para admiradores de filmes de super-heróis. Aqui você consegue assistir qualquer filme, seja da Marvel ou da DC.</p>
+            <a href="./cadastro.html">
+                <button class="btn bg-danger">Faça seu cadastro aqui.</button>
+            </a>
+        </section>
+        <section id="film-grid" class="container text-center">
+            <h2 class="fw-bold">Filmes da DC</h2>
+            <div class="row">
+                <div class="films mb-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="image-container">
+                        <img src="./img/arlequina.jpg">
+                    </div>
+                    <a href="./aves-rapina.html" class="text-decoration-underline text-dark"><h3>Aves de Rapina - Arlequina e sua Emancipação Fantabulosa</h3></a>
+                </div>
+                <div class="films mb-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="image-container">
+                        <img src="./img/mulher-maravilha.jfif">
+                    </div>
+                    <a href="./mulher-maravilha.html" class="text-decoration-underline text-dark"><h3>Mulher-Maravilha 1984</h3></a>
+                </div>
+                <div class="films mb-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="image-container">
+                        <img src="./img/coringa.jpg">
+                    </div>
+                    <a href="./coringa.html" class="text-decoration-underline text-dark"><h3>Coringa</h3></a>
+                </div>
+            </div>           
+        </section>
+        <section id="film-grid" class="container text-center">
+            <h2 class="fw-bold">Filmes da Marvel</h2>
+            <div class="row">
+                <div class="films mb-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="image-container">
+                        <img src="./img/viuva-negra.jpg">
+                    </div>
+                    <a href="./viuva-negra.html" class="text-decoration-underline text-dark"><h3>Viúva Negra</h3></a>
+                </div>
+                <div class="films mb-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="image-container">
+                        <img src="./img/vingadores.jpg">
+                    </div>
+                    <a href="./vingadores.html" class="text-decoration-underline text-dark"><h3>Vingadores: Ultimato</h3></a>
+                </div>
+                <div class="films mb-4 col-md-4 col-sm-6 col-xs-12">
+                    <div class="image-container">
+                        <img src="./img/capita-marvel.png">
+                    </div>
+                    <a href="./capita-marvel.html" class="text-decoration-underline text-dark"><h3>Capitã Marvel</h3></a>
+                </div>
+            </div>  
+        </section>
+    </main>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+        crossorigin="anonymous"></script>
+</body>
+
+</html>

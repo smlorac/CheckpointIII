@@ -1,0 +1,41 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+    scroll-padding: 5.625rem;
+  }
+
+body{
+    font-family: 'Roboto', sans-serif;
+}
+
+#banner{
+    background-image: url('../img/banner.jpg');
+    height: calc(100vh - 50px);
+    background-size: cover;
+    background-attachment: fixed;
+}
+
+.films img{
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    opacity: 0.75;
+    transition: all .3s ease-in-out;
+}
+
+.image-container{
+    height: 21.875rem;
+    width: 100%;
+    border: 10px groove;
+    border-radius: 15px;
+    overflow: hidden;
+}
+
+.films img:hover{
+    transform: scale(1.1);
+    opacity: 1;
+}
