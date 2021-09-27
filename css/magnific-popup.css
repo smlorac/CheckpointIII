@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&family=Yaldevi&display=swap');
+
 /* Magnific Popup CSS */
 .mfp-bg {
     top: 0;
@@ -484,7 +486,7 @@ html {
 }
 
 body {
-    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    font-family: 'Yaldevi', sans-serif;
     font-size: 14px;
     line-height: 1.6;
     color: #5A6064
