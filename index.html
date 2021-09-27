@@ -1,116 +1,234 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="shortcut icon" href="./img/logo16px.png" type="image/x-icon" />
+		<link
+			href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css"
+			rel="stylesheet"
+			integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU"
+			crossorigin="anonymous"
+		/>
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.css" />
+		<link rel="stylesheet" href="./css/fakeLoader.min.css" />
+		<link rel="stylesheet" href="./css/style.css" />
+		<title>Geekflix | Início</title>
+	</head>
 
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="shortcut icon" href="./img/logo16px.png" type="image/x-icon">
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/css/bootstrap.min.css" rel="stylesheet"
-        integrity="sha384-F3w7mX95PdgyTmZZMECAngseQB83DfGTowi0iMjiWaeVhAn4FJkqJByhZMI3AhiU" crossorigin="anonymous">
-    <link rel="stylesheet" href="./css/style.css">
-    <title>Geekflix | Início</title>
-</head>
+	<body>
+		<header>
+			<nav class="navbar navbar-expand-sm navbar-dark bg-light" aria-label="Third navbar example">
+				<div class="container-fluid">
+					<a class="navbar-brand" href="#"> <img src="./img/Geekflix.fw.png" alt="Logo da Geekflix" class="logo img-fluid mx-4" /></a>
+					<button
+						class="navbar-toggler"
+						type="button"
+						data-bs-toggle="collapse"
+						data-bs-target="filmes"
+						aria-controls="navbarsExample03"
+						aria-expanded="false"
+						aria-label="Toggle navigation"
+					>
+						<span class="navbar-toggler-icon"></span>
+					</button>
+					<div class="collapse navbar-collapse justify-content-end mx-4" id="filmes">
+						<ul class="navbar-nav">
+							<li class="nav-item">
+								<a class="nav-link active text-dark px-4" aria-current="page" href="#">Início</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link active text-dark px-4" data-bs-toggle="modal" data-bs-target="#cadastro">Cadastro</a>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle text-dark px-4" href="#" id="dropdown03" data-bs-toggle="dropdown" aria-expanded="false">Participantes</a>
+								<ul class="dropdown-menu" aria-labelledby="dropdown03">
+									<li><a class="dropdown-item" href="#dummy">Carol Silva</a></li>
+									<li><a class="dropdown-item" href="#dummy">Francielly</a></li>
+									<li><a class="dropdown-item" href="#dummy">Marcelo</a></li>
+									<li><a class="dropdown-item" href="#dummy">Matheus B. Dias</a></li>
+									<li><a class="dropdown-item" href="#dummy">Ronaldo F. Junior</a></li>
+									<li><a class="dropdown-item" href="#dummy">Wesley Bueno</a></li>
+								</ul>
+							</li>
+							<!-- <li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle text-dark px-4" href="#" id="dropdown03" data-bs-toggle="dropdown" aria-expanded="false">Filmes da DC</a>
+								<ul class="dropdown-menu" aria-labelledby="dropdown03">
+									<li><a class="dropdown-item" href="./aves-rapina.html">Aves de Rapina</a></li>
+									<li><a class="dropdown-item" href="./mulher-maravilha.html">Mulher-Maravilha</a></li>
+									<li><a class="dropdown-item" href="./coringa.html">Coringa</a></li>
+								</ul>
+							</li>
+							<li class="nav-item dropdown">
+								<a class="nav-link dropdown-toggle text-dark px-4" href="#" id="dropdown03" data-bs-toggle="dropdown" aria-expanded="false">Filmes da Marvel</a>
+								<ul class="dropdown-menu" aria-labelledby="dropdown03">
+									<li><a class="dropdown-item" href="./viuva-negra.html">Viúva Negra</a></li>
+									<li><a class="dropdown-item" href="./vingadores.html">Vingadores</a></li>
+									<li><a class="dropdown-item" href="./capita-marvel.html">Capitã Marvel</a></li>
+								</ul>
+							</li> -->
+						</ul>
+					</div>
+				</div>
+			</nav>
+		</header>
+		<main>
+			<section id="banner" class="d-flex flex-column align-items-center justify-content-center">
+				<h1 class="display-1 bg-dark text-light">Geekflix</h1>
+				<p class="bg-dark text-light">
+					O streaming feito para admiradores de filmes de super-heróis. Aqui você consegue assistir qualquer filme, seja da Marvel ou da DC.
+				</p>
+				<a href="#cadastro" class="cadastro">
+					<button class="btn bg-danger" data-bs-toggle="modal" data-bs-target="#cadastro">Faça seu cadastro aqui.</button>
+				</a>
+			</section>
+			<section id="film-grid" class="container text-center">
+				<h2 class="fw-bold" style="margin: 50px">Filmes da DC</h2>
+				<div class="row">
+					<div class="films mb-4 col-md-4 col-sm-6 col-xs-12">
+						<div class="image-container">
+							<img src="./img/arlequina.jpg" />
+						</div>
+						<a href="#" data-filme="aves-rapina.html" class="text-decoration-underline text-dark filmes"
+							><h3>Aves de Rapina - Arlequina e sua Emancipação Fantabulosa</h3></a
+						>
+					</div>
+					<div class="films mb-4 col-md-4 col-sm-6 col-xs-12">
+						<div class="image-container">
+							<img src="./img/mulher-maravilha.jfif" />
+						</div>
+						<a href="#" data-filme="mulher-maravilha.html" class="text-decoration-underline text-dark filmes"><h3>Mulher-Maravilha 1984</h3></a>
+					</div>
+					<div class="films mb-4 col-md-4 col-sm-6 col-xs-12">
+						<div class="image-container">
+							<img src="./img/coringa.jpg" />
+						</div>
+						<a href="#" data-filme="coringa.html" class="text-decoration-underline text-dark filmes"><h3>Coringa</h3></a>
+					</div>
+				</div>
+			</section>
+			<section id="film-grid" class="container text-center">
+				<h2 class="fw-bold" style="margin: 50px">Filmes da Marvel</h2>
+				<div class="row">
+					<div class="films mb-4 col-md-4 col-sm-6 col-xs-12">
+						<div class="image-container">
+							<img src="./img/viuva-negra.jpg" />
+						</div>
+						<a href="#" data-filme="viuva-negra.html" class="text-decoration-underline text-dark filmes"><h3>Viúva Negra</h3></a>
+					</div>
+					<div class="films mb-4 col-md-4 col-sm-6 col-xs-12">
+						<div class="image-container">
+							<img src="./img/vingadores.jpg" />
+						</div>
+						<a href="#" data-filme="vingadores.html" class="text-decoration-underline text-dark filmes"><h3>Vingadores: Ultimato</h3></a>
+					</div>
+					<div class="films mb-4 col-md-4 col-sm-6 col-xs-12">
+						<div class="image-container">
+							<img src="./img/capita-marvel.png" />
+						</div>
+						<a href="#" data-filme="capita-marvel.html" class="text-decoration-underline text-dark filmes"><h3>Capitã Marvel</h3></a>
+					</div>
+				</div>
+			</section>
+		</main>
 
-<body>
-    <header>
-        <nav class="navbar navbar-expand-sm navbar-dark bg-light" aria-label="Third navbar example">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="#"> <img src="./img/Geekflix.fw.png" alt="Logo da Geekflix" class="logo img-fluid mx-4"></a>
-                <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="filmes" aria-controls="navbarsExample03" aria-expanded="false"
-                    aria-label="Toggle navigation">
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse justify-content-end mx-4" id="filmes">
-                    <ul class="navbar-nav">
-                        <li class="nav-item">
-                            <a class="nav-link active text-dark px-4" aria-current="page" href="#">Início</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link active text-dark" aria-current="page" href="./cadastro.html">Cadastro</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-dark px-4" href="#" id="dropdown03" data-bs-toggle="dropdown"
-                                aria-expanded="false">Filmes da DC</a>
-                            <ul class="dropdown-menu" aria-labelledby="dropdown03">
-                                <li><a class="dropdown-item" href="./aves-rapina.html">Aves de Rapina</a></li>
-                                <li><a class="dropdown-item" href="./mulher-maravilha.html">Mulher-Maravilha</a></li>
-                                <li><a class="dropdown-item" href="./coringa.html">Coringa</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle text-dark px-4" href="#" id="dropdown03" data-bs-toggle="dropdown"
-                                aria-expanded="false">Filmes da Marvel</a>
-                            <ul class="dropdown-menu" aria-labelledby="dropdown03">
-                                <li><a class="dropdown-item" href="./viuva-negra.html">Viúva Negra</a></li>
-                                <li><a class="dropdown-item" href="./vingadores.html">Vingadores</a></li>
-                                <li><a class="dropdown-item" href="./capita-marvel.html">Capitã Marvel</a></li>
-                            </ul>
-                        </li>
-                    </ul>
-                </div>
-            </div>
-        </nav>
-    </header>
-    <main>
-        <section id="banner" class="d-flex flex-column align-items-center justify-content-center">
-            <h1 class="display-1 bg-dark text-light">Geekflix</h1>
-            <p class="bg-dark text-light">O streaming feito para admiradores de filmes de super-heróis. Aqui você consegue assistir qualquer filme, seja da Marvel ou da DC.</p>
-            <a href="./cadastro.html">
-                <button class="btn bg-danger">Faça seu cadastro aqui.</button>
-            </a>
-        </section>
-        <section id="film-grid" class="container text-center">
-            <h2 class="fw-bold">Filmes da DC</h2>
-            <div class="row">
-                <div class="films mb-4 col-md-4 col-sm-6 col-xs-12">
-                    <div class="image-container">
-                        <img src="./img/arlequina.jpg">
-                    </div>
-                    <a href="./aves-rapina.html" class="text-decoration-underline text-dark"><h3>Aves de Rapina - Arlequina e sua Emancipação Fantabulosa</h3></a>
-                </div>
-                <div class="films mb-4 col-md-4 col-sm-6 col-xs-12">
-                    <div class="image-container">
-                        <img src="./img/mulher-maravilha.jfif">
-                    </div>
-                    <a href="./mulher-maravilha.html" class="text-decoration-underline text-dark"><h3>Mulher-Maravilha 1984</h3></a>
-                </div>
-                <div class="films mb-4 col-md-4 col-sm-6 col-xs-12">
-                    <div class="image-container">
-                        <img src="./img/coringa.jpg">
-                    </div>
-                    <a href="./coringa.html" class="text-decoration-underline text-dark"><h3>Coringa</h3></a>
-                </div>
-            </div>           
-        </section>
-        <section id="film-grid" class="container text-center">
-            <h2 class="fw-bold">Filmes da Marvel</h2>
-            <div class="row">
-                <div class="films mb-4 col-md-4 col-sm-6 col-xs-12">
-                    <div class="image-container">
-                        <img src="./img/viuva-negra.jpg">
-                    </div>
-                    <a href="./viuva-negra.html" class="text-decoration-underline text-dark"><h3>Viúva Negra</h3></a>
-                </div>
-                <div class="films mb-4 col-md-4 col-sm-6 col-xs-12">
-                    <div class="image-container">
-                        <img src="./img/vingadores.jpg">
-                    </div>
-                    <a href="./vingadores.html" class="text-decoration-underline text-dark"><h3>Vingadores: Ultimato</h3></a>
-                </div>
-                <div class="films mb-4 col-md-4 col-sm-6 col-xs-12">
-                    <div class="image-container">
-                        <img src="./img/capita-marvel.png">
-                    </div>
-                    <a href="./capita-marvel.html" class="text-decoration-underline text-dark"><h3>Capitã Marvel</h3></a>
-                </div>
-            </div>  
-        </section>
-    </main>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
-        integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
-        crossorigin="anonymous"></script>
-</body>
+		<div class="fakeLoader"></div>
 
+		<div class="modal fade" id="cadastro" tabindex="-1" aria-labelledby="cadastro" aria-hidden="true">
+			<div class="modal-dialog" style="max-width: 80%">
+				<div class="modal-content">
+					<div class="modal-body">
+						<div class="col-lg-12 col-xl-11">
+							<div class="card-body p-md-5">
+								<div class="row justify-content-center">
+									<div class="col-md-10 col-lg-6 col-xl-5 order-2 order-lg-1">
+										<p class="text-center h1 fw-bold mb-5 mx-1 mx-md-4 mt-4">Registrar-se</p>
+
+										<form class="mx-1 mx-md-4">
+											<div class="d-flex flex-row align-items-center mb-4">
+												<i class="fas fa-user fa-lg me-3 fa-fw"></i>
+												<div class="form-outline flex-fill mb-0">
+													<input type="text" id="form3Example1c" class="form-control" />
+													<label class="form-label" for="form3Example1c">Seu Nome</label>
+												</div>
+											</div>
+
+											<div class="d-flex flex-row align-items-center mb-4">
+												<i class="fas fa-envelope fa-lg me-3 fa-fw"></i>
+												<div class="form-outline flex-fill mb-0">
+													<input type="email" id="form3Example3c" class="form-control" />
+													<label class="form-label" for="form3Example3c">Seu E-mail</label>
+												</div>
+											</div>
+
+											<div class="d-flex flex-row align-items-center mb-4">
+												<i class="fas fa-lock fa-lg me-3 fa-fw"></i>
+												<div class="form-outline flex-fill mb-0">
+													<input type="password" id="form3Example4c" class="form-control" />
+													<label class="form-label" for="form3Example4c">Senha</label>
+												</div>
+											</div>
+
+											<div class="d-flex flex-row align-items-center mb-4">
+												<i class="fas fa-key fa-lg me-3 fa-fw"></i>
+												<div class="form-outline flex-fill mb-0">
+													<input type="password" id="form3Example4cd" class="form-control" />
+													<label class="form-label" for="form3Example4cd">Repita sua senha</label>
+												</div>
+											</div>
+
+											<div class="form-check d-flex justify-content-center mb-5">
+												<input class="form-check-input me-2" type="checkbox" value="" id="form2Example3c" />
+												<label class="form-check-label" for="form2Example3"> Eu aceito todos os <a href="#!">Termos de Serviço</a> </label>
+											</div>
+
+											<div class="d-flex justify-content-center mx-4 mb-3 mb-lg-4">
+												<button type="button" class="btn btn-primary btn-lg">Registrar</button>
+											</div>
+										</form>
+									</div>
+									<div class="col-md-10 col-lg-6 col-xl-7 d-flex align-items-center order-1 order-lg-2">
+										<img src="https://mdbootstrap.com/img/Photos/new-templates/bootstrap-registration/draw1.png" class="img-fluid" alt="Sample image" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		<script
+			src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.1/dist/js/bootstrap.bundle.min.js"
+			integrity="sha384-/bQdsTh/da6pkI1MST/rWKFNjaCP5gBSY4sEBT38Q/9RBh9AH40zEOg7Hlq2THRZ"
+			crossorigin="anonymous"
+		></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+		<script src="./js/fakeLoader.min.js"></script>
+
+		<script>
+			$(document).ready(function () {
+				$('.filmes').click(function () {
+					let endereco = $(this).data('filme');
+
+					$.dialog({
+						title: '',
+						content: `url:./${endereco}`,
+						columnClass: 'medium',
+						cancelButton: false,
+						confirmButton: false,
+						closeIcon: true,
+					});
+				});
+
+				$.fakeLoader({
+					timeToHide: 1800,
+					bgColor: '#3498db',
+					spinner: 'spinner4',
+				});
+			});
+		</script>
+	</body>
 </html>
