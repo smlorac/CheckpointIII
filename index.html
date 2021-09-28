@@ -36,10 +36,13 @@
 					<div class="collapse navbar-collapse justify-content-end mx-4" id="filmes">
 						<ul class="navbar-nav">
 							<li class="nav-item">
-								<a class="nav-link active text-dark px-4" aria-current="page" href="#">Início</a>
+								<a class="nav-link active text-dark px-4" aria-current="page" href="#" style="cursor: pointer">Início</a>
 							</li>
 							<li class="nav-item">
-								<a class="nav-link active text-dark px-4" data-bs-toggle="modal" data-bs-target="#cadastro">Cadastro</a>
+								<a class="nav-link active text-dark px-4" data-bs-toggle="modal" data-bs-target="#cadastro" style="cursor: pointer">Cadastro</a>
+							</li>
+							<li class="nav-item">
+								<a class="nav-link active text-dark px-4 brinde" style="cursor: pointer">Ganhar um Brinde</a>
 							</li>
 							<li class="nav-item dropdown">
 								<a class="nav-link dropdown-toggle text-dark px-4" href="#" id="dropdown03" data-bs-toggle="dropdown" aria-expanded="false">Participantes</a>
@@ -52,22 +55,6 @@
 									<li><a class="dropdown-item" href="https://github.com/buenodark" target="_blank">Wesley B. M. Alves</a></li>
 								</ul>
 							</li>
-							<!-- <li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle text-dark px-4" href="#" id="dropdown03" data-bs-toggle="dropdown" aria-expanded="false">Filmes da DC</a>
-								<ul class="dropdown-menu" aria-labelledby="dropdown03">
-									<li><a class="dropdown-item" href="./aves-rapina.html">Aves de Rapina</a></li>
-									<li><a class="dropdown-item" href="./mulher-maravilha.html">Mulher-Maravilha</a></li>
-									<li><a class="dropdown-item" href="./coringa.html">Coringa</a></li>
-								</ul>
-							</li>
-							<li class="nav-item dropdown">
-								<a class="nav-link dropdown-toggle text-dark px-4" href="#" id="dropdown03" data-bs-toggle="dropdown" aria-expanded="false">Filmes da Marvel</a>
-								<ul class="dropdown-menu" aria-labelledby="dropdown03">
-									<li><a class="dropdown-item" href="./viuva-negra.html">Viúva Negra</a></li>
-									<li><a class="dropdown-item" href="./vingadores.html">Vingadores</a></li>
-									<li><a class="dropdown-item" href="./capita-marvel.html">Capitã Marvel</a></li>
-								</ul>
-							</li> -->
 						</ul>
 					</div>
 				</div>
@@ -206,6 +193,7 @@
 		></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-confirm/3.3.2/jquery-confirm.min.js"></script>
+		<script src="./js/confetti.js"></script>
 		<script src="./js/fakeLoader.min.js"></script>
 
 		<script>
@@ -221,6 +209,16 @@
 						confirmButton: false,
 						closeIcon: true,
 					});
+				});
+
+				$('.brinde').on('click', function () {
+					let atual = $(this).html();
+					toggleConfetti();
+					if (atual == 'Ganhar um Brinde') {
+						$(this).html('Não quero o brinde');
+					} else {
+						$(this).html('Ganhar um Brinde');
+					}
 				});
 
 				$.fakeLoader({

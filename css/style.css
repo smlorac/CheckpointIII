@@ -1,26 +1,26 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto:wght@100;400;700&family=Yaldevi&display=swap');
 
-*{
+* {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
     scroll-behavior: smooth;
     scroll-padding: 5.625rem;
-  }
+}
 
-body{
+body {
     font-family: 'Roboto', sans-serif;
     background-color: transparent;
 }
 
-#banner{
+#banner {
     background-image: url('../img/banner.jpg');
     height: calc(100vh - 50px);
     background-size: cover;
     background-attachment: fixed;
 }
 
-.films img{
+.films img {
     height: 100%;
     width: 100%;
     object-fit: cover;
@@ -28,15 +28,21 @@ body{
     transition: all .3s ease-in-out;
 }
 
-.image-container{
+.image-container {
     height: 21.875rem;
     width: 100%;
     border: 4px solid;
-    border-image: linear-gradient(135deg, #FF0000  0%, #080808 100%) 1;
+    border-image: linear-gradient(135deg, #FF0000 0%, #080808 100%) 1;
     overflow: hidden;
 }
 
-.films img:hover{
+.films img:hover {
     transform: scale(1.1);
     opacity: 1;
+}
+
+#confetti-canvas {
+    width: 100% !important;
+    position: absolute !important;
+    top: 0 !important;
 }
