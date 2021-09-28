@@ -46,3 +46,16 @@ body {
     position: absolute !important;
     top: 0 !important;
 }
+
+.brinde {
+    animation: blinker 1s linear infinite;
+    background-color: #0b5cbc;
+    border-radius: 8px;
+    color: white !important;
+}
+
+@keyframes blinker {
+    50% {
+        opacity: 0;
+    }
+}
